@@ -26,20 +26,20 @@ jobs:
           SPONSORKIT_GITHUB_TOKEN: ${{ secrets.SPONSORKIT_GITHUB_TOKEN }}
           SPONSORKIT_GITHUB_LOGIN: CollinHeist
 
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v4
-        with:
-          commit-message: "Update sponsors.svg"
-          add-paths: "sponsorkit/sponsors.svg"
-          title: Update Sponsor Image
-          body: Generated new image
-          branch: main
-          delete-branch: false
-
-      # - name: Commit
-      #   uses: EndBug/add-and-commit@v9
+      # - name: Create Pull Request
+      #   uses: peter-evans/create-pull-request@v4
       #   with:
-      #     message: "Update sponsors.svg"
-      #     add: "sponsorkit/sponsors.svg"
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #     commit-message: "Update sponsors.svg"
+      #     add-paths: "sponsorkit/sponsors.svg"
+      #     title: Update Sponsor Image
+      #     body: Generated new image
+      #     branch: main
+      #     delete-branch: false
+
+      - name: Commit
+        uses: EndBug/add-and-commit@v9
+        with:
+          message: "Update sponsors.svg"
+          add: "sponsorkit/sponsors.svg"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
