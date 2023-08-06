@@ -16,25 +16,12 @@ jobs:
         with:
           node-version: lts/*
 
-      # - run: echo SPONSORKIT_GITHUB_TOKEN=\nSPONSORKIT_GITHUB_LOGIN= >> .env
-      # - run: npm install
-
       - name: Update sponsors
-        # run: npm run build
         run: cd sponsorkit && npm install sponsorkit@0.8.7 && npx sponsorkit -o sponsors.svg
         env:
           SPONSORKIT_GITHUB_TOKEN: ${{ secrets.SPONSORKIT_GITHUB_TOKEN }}
           SPONSORKIT_GITHUB_LOGIN: CollinHeist
 
-      # - name: Create Pull Request
-      #   uses: peter-evans/create-pull-request@v4
-      #   with:
-      #     commit-message: "Update sponsors.svg"
-      #     add-paths: "sponsorkit/sponsors.svg"
-      #     title: Update Sponsor Image
-      #     body: Generated new image
-      #     branch: main
-      #     delete-branch: false
 
       - name: Commit
         uses: EndBug/add-and-commit@v9

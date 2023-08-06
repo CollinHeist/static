@@ -16,10 +16,6 @@ export default defineConfig({
             title: "Sponsors",
             preset: presets.medium,
             monthlyDollars: 1,
-            // to insert custom elements after the tier block
-            // composeAfter: (composer, _tierSponsors, _config) => {
-            //     composer.addSpan(10);
-            // },
         },
         {
             title: 'Premium Sponsors',
