@@ -20,7 +20,7 @@ export default defineConfig({
         {
             title: 'Premium Sponsors',
             preset: presets.large,
-            monthlyDollars: 10,
+            monthlyDollars: 5,
         },
     ],
 });
