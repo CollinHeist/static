@@ -26,6 +26,6 @@ jobs:
         uses: EndBug/add-and-commit@v9
         with:
           message: "Update sponsors.svg"
-          add: "sponsorkit/sponsors.svg"
+          add: "sponsorkit/sponsors.svg/sponsors.svg"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
