@@ -1,9 +1,9 @@
-name: Scheduler
+name: Update Sponsor Image
 
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 */6 * * *"
 
 jobs:
   update-sponsors:
@@ -21,7 +21,6 @@ jobs:
         env:
           SPONSORKIT_GITHUB_TOKEN: ${{ secrets.SPONSORKIT_GITHUB_TOKEN }}
           SPONSORKIT_GITHUB_LOGIN: CollinHeist
-
 
       - name: Commit
         uses: EndBug/add-and-commit@v9
