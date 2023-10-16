@@ -22,5 +22,10 @@ export default defineConfig({
             preset: presets.large,
             monthlyDollars: 5,
         },
+        {
+            title: 'Elite Sponsors',
+            preset: presets.xl,
+            monthlyDollars: 10,
+        }
     ],
 });
